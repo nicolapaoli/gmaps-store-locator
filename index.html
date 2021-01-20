@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodafone Store Locator</title>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="title">Vodafone <br>Store Locator</div>
+    <div class="search-container">
+        <div class="search">
+            <input onkeyup="onEnter(event)" id="zipcode" type="text" placeholder="Enter Address, City or CAP">
+            <i onclick="getStores()" class="fas fa-search"></i>
+        </div>
+    </div>
+    <div class="stores-list-container">
+        <div id="stores-list" class="stores-list">
+            <div class="intro">
+                <span class="enter-zip">Enter an address</span>
+                <span class="find-stores">Find stores near you</span>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="js/index.js" async defer ></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<GOOGLE-MAPS-API-KEY>&callback=initMap">
+    </script>
+</body>
+</html>
